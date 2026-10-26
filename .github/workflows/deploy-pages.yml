@@ -15,11 +15,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - run: mkdir -p site && echo '<p id="build">build-id: ${{ github.sha }}-main</p>' > site/index.html
+      - run: |
+          mkdir -p site && echo '<p id="build">build-id: ${{ github.sha }}-main</p>' > site/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
       - id: deployment
         uses: actions/deploy-pages@v4
-# run: 2026-10-26T18:42:42Z
+# run: 2026-10-26T18:47:36Z
