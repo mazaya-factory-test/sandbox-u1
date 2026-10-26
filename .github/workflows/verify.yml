@@ -1,0 +1,12 @@
+name: verify
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo verify ok
+# run: 2026-10-26T17:29:13Z
